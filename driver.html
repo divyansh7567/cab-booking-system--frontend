@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <style>
+        h1 {
+            background-color: orange;
+            text-align: left;
+            text-transform: capitalize;
+            font-family: 'Courier New', Courier, monospace;
+            margin-right: 1rem;
+
+        }
+
+        body {
+            background-image: url("traffic.jpg");
+            background-size: 100% 100%;
+        }
+
+        h2 {
+            background-color: rgb(228, 196, 19);
+            color: black;
+            margin-top: 0;
+        }
+
+        .flexcontainer {
+            background-color: (0, 0, 0, 0);
+            background-repeat: no-repeat;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            display: -webkit-flex;
+            -webkit-justify-content: space-between;
+            justify-content: space-around;
+            display: flex;
+            width: 100%;
+            height: 100%;
+
+            align-items: center;
+        }
+
+        .flexitem {
+            background-color: rgba(214, 106, 23, 0.5);
+            border: 2px solid black;
+            width: 600px;
+            height: 450px;
+            margin: 10px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+            text-transform: capitalize;
+            margin-bottom: 8rem;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            height: 2rem;
+            background-color: orange;
+            font-size: large;
+            font-family: "Courier new";
+            text-align: center;
+        }
+    </style>
+</head>
+<script src="jquery-3.6.4.min.js"></script>
+<script src="angular.min.js"></script>
+<script>
+    angular.module('myApp', []);
+    angular.module('myApp').controller('myCtrl', function($scope) {
+        $scope.submitted = true;
+        $scope.onSubmit = function() {
+            $scope.submitted=!$scope.submitted;
+        }
+    })
+</script>
+
+<body ng-app="myApp">
+    <h1>Ride Details</h1>
+    <div class="flexcontainer">
+        <div class="flexitem" ng-controller="myCtrl">
+            <h2>Driver infomation</h2>
+            <form name="info" novalidate ng-submit="onSubmit()">
+                <b>Enter name:</b>
+                <input name="name" ng-model="name" placeholder="Enter your name" ng-pattern="/^[A-Za-z\s]+$/" required><br><br>
+                <b>Enter phone number:</b>
+                <input type="text" name="num" ng-model="number" placeholder="Enter your phone number" ng-pattern="/^\d{10}$/" required><br><br>
+                <button type="submit" ng-disabled="info.$invalid">fetch driver details</button>
+            </form>
+            <div id="toggler" ng-hide="submitted">
+                <image src="driverimage.jpg" width="150px" height="100px"></image><br><br>
+                <form >
+                    <b>Driver name:</b>
+                    <input type="text" id="dname"> <br><br>
+                    <b>Driver phone number:</b>
+                    <input type="text" id="dnum"> 
+                </form>
+            </div>
+        </div>
+        <div class="flexitem">
+            <h2>Driver messages</h2>
+            <form name="message" ng-controller="myCtrl" novalidate>
+                <b>Send message or instruction to driver:</b><br><br>
+                <textarea name="reply"></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer"><span class="space"><b>Email:</b>cabhub@yahoo.com</span><span
+            class="space"><b>Instagram:</b>cabhub</span>
+        <span class="space"><b>Twitter:</b>cabhub2023</span><span
+            class="space"><b>Phone:</b>99XXXXXXXX,88XXXXXXXX</span><span><b>Address:</b>
+            VIT University, Vellore-632014</span>
+    </div>
+</body>
+
+</html>

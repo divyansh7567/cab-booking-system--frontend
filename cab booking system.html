@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .main{
+                background-image: url('traffic.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size:100% 100%;
+                background-blend-mode: lighten;
+                display:-webkit-flex;
+                -webkit-justify-content: space-between;
+                justify-content: space-around;
+                height: 41rem;
+                width:100%;
+                align-items: center;
+            }
+            .fhead {
+                text-align: center;
+                background-color: rgb(228, 196, 19);
+                color: black;
+                margin-top: 0;
+            }
+
+            body {
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size:100% 100%;
+            }
+            #main{
+                background-color: orange;
+                text-align:left;
+                font-size: 4rem;
+                font-family:'Courier New', Courier, monospace;
+                padding-left: 1rem;
+            }
+            *{
+                transition: .2s linear;
+                margin:0;
+                padding:0;
+                box-sizing:0;
+            }
+            .container{
+                background-color:orange;
+                background-position: center;
+                background-size:cover;
+                width: 100%;
+                height:20%;
+            
+            }
+            .header1{
+                display: flex;
+                justify-content:safe;
+                width:100%;
+                padding:0;
+                align-items: center;
+            }
+            .header1 .navbar{
+                font-size:1.4em;
+                margin-left:1rem;
+                margin-right: 1rem;
+                color:white;
+                text-decoration:none;
+            }
+            .header1 .navbar a:hover{
+                background:yellow;
+                padding: 0.5rem;
+                border-radius: 15px;
+            }
+            .flex-container{
+                display:-webkit-flex;
+                display:flex;
+                width:400px;
+                height:200px;
+                background-color:white;
+            }
+            .flexitem{
+                background-color: rgba(84, 67, 50, 0.1);
+                border: 2px solid black;
+                width:400px;
+                height:400px;
+                margin:10px;
+                color: white;
+                text-align: left;
+                font-family:'Courier New', Courier, monospace;
+                font-size: medium;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 8rem;
+            }
+            
+            .footer{
+                position:fixed;
+                bottom: 0;
+                width: 100%;
+                left:0;
+                height:2rem;
+                background-color:orange;
+                font-size: large;
+                font-family:"Courier new";
+                text-align: center;
+            }
+            .space{
+                margin-left: 0.5em;
+                margin-right: 0.5rem;
+            }
+            .l1{
+                margin-left: 25px;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                color:white;
+                font-weight: bolder;
+            }
+            a:hover{
+                background:white;
+                padding: 0.5em;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <script>
+        function refreshPage(){
+             window.location.reload();
+        } 
+    </script>
+    <body>
+        <h1 id="main">CabHub</h1>
+        <div class="container">
+            <header class="header1">
+                <a href="#" id="logo"><img src="" alt=""></a>
+                <nav class="navbar">
+                    <a href="cab booking system.html"? onclick="refreshPage()">Home</a>
+                    <a href="book a two wheeler.html"?>Book a two wheeler</a>
+                    <a href="bookyourcab.html"?>Book your cab</a>
+                    <a href="driver.html?">Ride Details</a>
+                    <a href="contact.html"?>Contact us</a>
+                    </nav>
+                <a href="#" id="menu-bars" class="fas fa-bars"></a>
+            </header>
+        </div> 
+        <div class="main">
+            <div class="flexitem">
+                <h2 class="fhead">
+                    About us
+                </h2>
+                <ul class="l1">
+                    <li>Best Price Guaranteed</li>
+                    <li>24/7 Customer Care</li>
+                    <li>Home Pickups</li>
+                    <li>Easy Bookings</li>
+                    <li>100% customer satisfaction</li>
+                    <li>200+ Luxury Cars</li>
+                    <li>12000+ kilometers driven</li>
+                </ul>
+            </div>
+            <div class="flexitem">
+                <h2 class="fhead">Our Blog</h2>
+                <ul class="l1">
+                    <li><a href="OurBlog">Our Blog</a></li>
+                    <li><a href="Bloglist">Blog List</a></li>
+                    <li><a href="Blogdetail">Blog Detail</a></li>
+                </ul>
+            </div>
+            <div class="flexitem">
+                <h2 class="fhead">Offers</h2>
+                <ul class="l1">
+                    <li>Use promocode FIRST50 to get Rs.50 off on first ride</li>
+                    <li>Look out for festiv-promotional codes on various occasions</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer"><span class="space"><b>Email:</b>cabhub@yahoo.com</span><span class="space"><b>Instagram:</b>cabhub</span>
+        <span class="space"><b>Twitter:</b>cabhub2023</span><span class="space"><b>Phone:</b>99XXXXXXXX,88XXXXXXXX</span><span><b>Address:</b>
+        VIT University, Vellore-632014</span></div>
+    </body>
+</html>
